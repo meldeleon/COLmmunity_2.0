@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "discord.js": "^13.7.0"
+  },
+  "name": "colmmunitybot_2.0",
+  "version": "1.0.0",
+  "description": "community bot for Complexity Apex Team",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/meldeleon/COLmmunity_2.0.git"
+  },
+  "author": "Mel de Leon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/meldeleon/COLmmunity_2.0/issues"
+  },
+  "homepage": "https://github.com/meldeleon/COLmmunity_2.0#readme"
+}
