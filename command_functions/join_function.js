@@ -1,7 +1,7 @@
-export function join(queue, member) {
+exports.join = function (queue, member) {
   let viewer = {
-    user_id: member.user.id,
-    user_name: member.user.username,
+    user_id: member.id,
+    user_name: member.username,
     queued: true,
     games_played: 0,
   }

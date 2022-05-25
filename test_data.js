@@ -1,3 +1,15 @@
+exports.factionParams = {
+  count: 2,
+  teamNames: ["Team Blue", "Team Green"],
+  colors: ["blue", "green"],
+  discordChannels: [
+    "https://discord.com/channels/965039544183431188/965077230952804362",
+    "https://discord.com/channels/965039544183431188/965078950449647686",
+  ],
+  roleIds: ["965071590293393438", "965071669007908934"],
+  commanders: ["109422963136208896", "174039711340429312"],
+}
+
 exports.testQueue = [
   {
     user_id: "807313410009202788",
@@ -72,3 +84,5 @@ exports.testQueue = [
     games_played: 0,
   },
 ]
+
+console.log(exports.testQueue)
