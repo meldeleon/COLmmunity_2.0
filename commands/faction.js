@@ -4,6 +4,9 @@ const {
   createFactions,
 } = require("../command_functions/create_faction_function.js")
 const { pushFaction } = require("../db_functions/push_faction.js")
+const {
+  printFactions,
+} = require("../command_functions/print_factions_function")
 
 module.exports = {
   data: new SlashCommandBuilder()
@@ -14,7 +17,11 @@ module.exports = {
     pushFaction(factions)
     console.log(`${interaction.user.tag} has created new factions`)
     await interaction.reply({
-      content: `**${interaction.user.tag} has created a faction war, type /join to queue up for the war!**\n factions: \n`,
+      content: `**${
+        interaction.user.tag
+      } has created a faction war, type /join to queue up for the war!**\n ${printFactions(
+        factions
+      )}`,
     })
   },
 }
