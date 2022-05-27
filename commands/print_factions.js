@@ -9,7 +9,8 @@ module.exports = {
     .setName("print_factions")
     .setDescription("Replies with server info!"),
   async execute(interaction) {
-    let faction = await pullFactions()
-    await interaction.reply(`${printFactions(faction)}`)
+    let factions = await pullFactions()
+    let printStatement = printFactions(factions)
+    await interaction.reply(`${printStatement}`)
   },
 }

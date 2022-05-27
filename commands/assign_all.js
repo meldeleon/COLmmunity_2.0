@@ -15,17 +15,12 @@ module.exports = {
     let queue = await pullQueue()
     let factions = await pullFactions()
     let assignedFactions = assignAll(queue, factions)
-    console.log(assignedFactions)
     pushFaction(assignedFactions)
     console.log(
       `${interaction.user.tag} has assigned all queued users to factions`
     )
     await interaction.reply({
-      content: `**${
-        interaction.user.tag
-      } has created assigned all queued users to factions: \n ${printFactions(
-        factions
-      )}`,
+      content: `**${interaction.user.tag} has created assigned all queued users to factions!`,
     })
   },
 }

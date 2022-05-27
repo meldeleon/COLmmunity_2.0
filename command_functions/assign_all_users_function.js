@@ -1,20 +1,17 @@
-const user = require("../commands/user")
+const { selectUsers } = require("./select_users_function")
 
 exports.assignAll = function (queue, factions) {
-  let users = queue.map((user) => {
-    return user.id
-  })
+  let selectedUsers = selectUsers(queue, factions)
   let factionCount = factions.length
-  let teams
   switch (factionCount) {
     case 2:
-      teams = assignTwoTeams(users)
+      teams = assignTwoTeams(selectedUsers)
       break
     case 3:
-      teams = assignThreeTeams(users)
+      teams = assignThreeTeams(selectedUsers)
       break
     case 4:
-      teams = assignFourTeams(users)
+      teams = assignFourTeams(selectedUsers)
       break
     default:
       teams = []
@@ -22,11 +19,12 @@ exports.assignAll = function (queue, factions) {
   return factions.map((faction, index) => {
     let assignedFaction = { ...faction }
     assignedFaction.users = teams[index]
+    return assignedFaction
   })
 }
 
 function assignTwoTeams(users) {
-  let teams = new Array(2).fill(Array())
+  let teams = [[], []]
   users.forEach((user, index) => {
     if (index % 2 === 0) {
       teams[1].push(user)
@@ -38,7 +36,7 @@ function assignTwoTeams(users) {
 }
 
 function assignThreeTeams(users) {
-  let teams = new Array(3).fill(Array())
+  let teams = [[], [], []]
   users.forEach((user, index) => {
     if (index % 3 === 0) {
       teams[2].push(user)
@@ -52,7 +50,7 @@ function assignThreeTeams(users) {
 }
 
 function assignFourTeams(users) {
-  let teams = new Array(4).fill(Array())
+  let teams = [[], [], [], []]
   users.forEach((user, index) => {
     if (index % 4 === 0) {
       teams[3].push(user)

@@ -9,7 +9,7 @@ module.exports = {
     .setName("test")
     .setDescription("testing grounds for commands!"),
   async execute(interaction) {
-    let hamster = await pullFactions()
+    let hamster = await pullQueue()
     console.log(hamster)
     await interaction.reply({ content: `this is a test!`, ephemeral: true })
   },
