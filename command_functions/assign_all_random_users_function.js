@@ -1,6 +1,6 @@
 const { selectUsers } = require("./select_users_function")
 
-exports.assignAll = function (queue, factions) {
+exports.assignAllRandom = function (queue, factions) {
   let selectedUsers = selectUsers(queue, factions)
   let factionCount = factions.length
   switch (factionCount) {

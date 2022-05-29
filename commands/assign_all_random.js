@@ -1,5 +1,7 @@
 const { SlashCommandBuilder } = require("@discordjs/builders")
-const { assignAll } = require("../command_functions/assign_all_users_function")
+const {
+  assignAllRandom,
+} = require("../command_functions/assign_all_random_users_function")
 const { pullFactions } = require("../db_functions/pull_faction")
 const { pullQueue } = require("../db_functions/pull_queue")
 const { pushFaction } = require("../db_functions/push_faction")
@@ -14,7 +16,7 @@ module.exports = {
   async execute(interaction) {
     let queue = await pullQueue()
     let factions = await pullFactions()
-    let assignedFactions = assignAll(queue, factions)
+    let assignedFactions = assignAllRandom(queue, factions)
     pushFaction(assignedFactions)
     console.log(
       `${interaction.user.tag} has assigned all queued users to factions`

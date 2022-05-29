@@ -10,6 +10,7 @@ module.exports = {
     .setDescription("Replies with server info!"),
   async execute(interaction) {
     let factions = await pullFactions()
+    console.log(factions)
     let printStatement = printFactions(factions)
     await interaction.reply(`${printStatement}`)
   },

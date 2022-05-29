@@ -7,7 +7,9 @@ const path = require("node:path")
 const { Client, Collection, Intents } = require("discord.js")
 
 // Create a new client instance
-const client = new Client({ intents: [Intents.FLAGS.GUILDS] })
+const client = new Client({
+  intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MEMBERS],
+})
 
 // Grab commands from the commands folder
 client.commands = new Collection()
@@ -29,6 +31,7 @@ client.once("ready", () => {
 
 // Command handler
 client.on("interactionCreate", async (interaction) => {
+  interaction.guild.members.fetch().then(console.log).catch(console.error)
   if (!interaction.isCommand()) return
   const command = client.commands.get(interaction.commandName)
   if (!command) return
