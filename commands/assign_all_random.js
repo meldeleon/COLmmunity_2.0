@@ -12,7 +12,7 @@ const {
 module.exports = {
   data: new SlashCommandBuilder()
     .setName("assign_all")
-    .setDescription("create  a faction war."),
+    .setDescription("assign all users in queue to factions"),
   async execute(interaction) {
     let queue = await pullQueue()
     let factions = await pullFactions()
@@ -22,7 +22,7 @@ module.exports = {
       `${interaction.user.tag} has assigned all queued users to factions`
     )
     await interaction.reply({
-      content: `**${interaction.user.tag} has created assigned all queued users to factions!`,
+      content: `**${interaction.user.tag} has created assigned all queued users to factions!**`,
     })
   },
 }
