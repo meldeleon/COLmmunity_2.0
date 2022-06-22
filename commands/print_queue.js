@@ -9,6 +9,7 @@ module.exports = {
   async execute(interaction) {
     let queue = await pullQueue()
     let responseString = printQueue(queue)
+    console.log(queue)
     await interaction.reply({
       content: `The current queue is: ${responseString} `,
       ephemeral: true,

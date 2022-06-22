@@ -23,12 +23,12 @@ exports.testQueue = [
     queued: true,
     games_played: 0,
   },
-  {
-    user_id: "882498923476955147",
-    user_name: "Prasler",
-    queued: true,
-    games_played: 2,
-  },
+  // deprecated user, uncomment for testing {
+  //   user_id: "882498923476955147",
+  //   user_name: "Prasler",
+  //   queued: true,
+  //   games_played: 2,
+  // },
   {
     user_id: "698444987964194876",
     user_name: "semkki",
@@ -80,6 +80,12 @@ exports.testQueue = [
   {
     user_id: "439987718060113941",
     user_name: "Profantasies",
+    queued: true,
+    games_played: 0,
+  },
+  {
+    user_id: "279052991976308738",
+    user_name: "juiceboxhero",
     queued: true,
     games_played: 0,
   },

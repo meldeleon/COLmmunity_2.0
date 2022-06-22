@@ -9,13 +9,7 @@ module.exports = {
     .setName("test")
     .setDescription("testing grounds for commands!"),
   async execute(interaction) {
-    let testResponse = await interaction.guild.members
-      .fetch("882498923476955147")
-      .catch((error) => {
-        console.error(error)
-        return undefined
-      })
-    console.log(testResponse)
+    pushQueue(testQueue)
     await interaction.reply({ content: `this is a test!`, ephemeral: true })
   },
 }
