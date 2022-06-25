@@ -12,7 +12,7 @@ module.exports = {
     console.log(currentFactions)
     reset(currentFactions, currentQueue)
     await interaction.reply({
-      content: `**${interaction.user.tag} has created reset all faction asiignes and queue, type /join to queue up for the war!**`,
+      content: `**${interaction.user.tag} has  reset all faction assignments and queue, type /join to queue up for the war!**`,
     })
   },
 }

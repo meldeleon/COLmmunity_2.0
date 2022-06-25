@@ -35,9 +35,9 @@ COLmmunity chat bot is a bot created for Complexity's community nights. It's pri
 ## STUFF TO DO:
 
 1. ~~Add /assign_commander function~~
-1. Add commander to /print_faction function
-1. Add /reset command to reset all factions and flip all currently queued users to off.
-1. Add /clear_queue command to flip all currently queued users to off.
+1. ~~Add commander to /print_faction function~~
+1. ~~Add /reset command to reset all factions and flipz currently queued users to off.~~
+1. ~~Add /clear_queue command to flip all currently queued users to off.~~
 1. Add /start command to locks faction assignments, flips users in queue to false, assigns faction roles, sends out voice invites, increment the number of games played per assigned user.
 
 ## KNOWN BUGS
