@@ -100,7 +100,7 @@ exports.testFactions = [
     maxUsers: 29,
     roleId: "965071590293393438",
     teamName: "Team Blue",
-    users: [],
+    users: ["174039711340429312"],
   },
 
   {
@@ -111,6 +111,6 @@ exports.testFactions = [
     maxUsers: 29,
     roleId: "965071669007908934",
     teamName: "Team Green",
-    users: [],
+    users: ["174039711340429312"],
   },
 ]

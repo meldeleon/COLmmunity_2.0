@@ -12,7 +12,7 @@ exports.printFactions = function (factions) {
     let commander = faction.commander
     return `${symbolMap[faction.color]} ${
       faction.teamName
-    } - :crossed_swords: Commander: <@${commander}>, ${userList} \n ━━━━━━━━━━━━━━━━━━━━`
+    } - :crossed_swords: Commander: <@${commander}>, ${userList} \n ─────────`
   })
   return printStatements.join("\n")
 }
