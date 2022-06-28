@@ -9,7 +9,7 @@ module.exports = {
     .setName("test")
     .setDescription("testing grounds for commands!"),
   async execute(interaction) {
-    pushQueue(testQueue)
+    pushQueue(testQueue, true)
     await interaction.reply({ content: `this is a test!`, ephemeral: true })
   },
 }

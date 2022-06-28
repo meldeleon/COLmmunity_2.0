@@ -13,5 +13,5 @@ exports.reset = function (factions, queue) {
     newUser.queued = false
     return newUser
   })
-  pushQueue(updatedQueue)
+  pushQueue(updatedQueue, true)
 }

@@ -6,7 +6,7 @@ const dynamodb = new AWS.DynamoDB.DocumentClient({
   secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
 })
 
-exports.pullQueue = async function () {
+exports.pullQueuedUsers = async function () {
   let params = {
     ExpressionAttributeValues: {
       ":i": "butts",
@@ -16,7 +16,7 @@ exports.pullQueue = async function () {
   }
   try {
     const results = await dynamodb.query(params).promise()
-    return results.Items[0].queued_users
+    return results.Items[0].queued_users.filter((user) => user.queued === true)
   } catch (err) {
     console.error(err)
   }

@@ -7,12 +7,13 @@ const dynamodb = new AWS.DynamoDB.DocumentClient({
 })
 const { butts } = require("../command_functions/butts.js")
 
-exports.pushQueue = function (queue) {
+exports.pushQueue = function (queue, openStatus) {
   let params = {
     TableName: "col_queue",
     Item: {
       id: butts(),
       queued_users: queue,
+      open: openStatus,
     },
   }
   dynamodb.put(params, function (err, data) {

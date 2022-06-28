@@ -80,13 +80,13 @@ exports.testQueue = [
   {
     user_id: "439987718060113941",
     user_name: "Profantasies",
-    queued: true,
+    queued: false,
     games_played: 0,
   },
   {
     user_id: "279052991976308738",
     user_name: "juiceboxhero",
-    queued: true,
+    queued: false,
     games_played: 0,
   },
 ]

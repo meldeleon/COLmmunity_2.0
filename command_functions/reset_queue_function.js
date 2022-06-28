@@ -6,5 +6,5 @@ exports.resetQueue = function (queue) {
     newUser.queued = false
     return newUser
   })
-  pushQueue(updatedQueue)
+  pushQueue(updatedQueue, true)
 }

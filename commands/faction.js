@@ -10,6 +10,8 @@ const {
   printFactions,
 } = require("../command_functions/print_factions_function")
 const req = require("express/lib/request")
+const { pullQueue } = require("../db_functions/pull_queue")
+const { pushQueue } = require("../db_functions/push_queue")
 
 module.exports = {
   data: new SlashCommandBuilder()
@@ -27,6 +29,8 @@ module.exports = {
         )
     ),
   async execute(interaction) {
+    let currentQueue = await pullQueue()
+    pushQueue(currentQueue, true)
     let numberOfFactions = interaction.options.getInteger("number")
     let factions = createFactions(factionParams(numberOfFactions))
     pushFaction(factions)

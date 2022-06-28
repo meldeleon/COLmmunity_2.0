@@ -15,7 +15,7 @@ module.exports = {
       `${interaction.user.tag} has unassigned all users from factions`
     )
     await interaction.reply({
-      content: `**${interaction.user.tag} has created unassigned all queued users from factions!**`,
+      content: `**${interaction.user.tag} has unassigned all queued users from factions!**`,
     })
   },
 }

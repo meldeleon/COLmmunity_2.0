@@ -38,9 +38,9 @@ COLmmunity chat bot is a bot created for Complexity's community nights. It's pri
 1. ~~Add commander to /print_faction function~~
 1. ~~Add /reset command to reset all factions and flipz currently queued users to off.~~
 1. ~~Add /clear_queue command to flip all currently queued users to off.~~
-1. Add /start command to locks faction assignments, flips users in queue to false, assigns faction roles, sends out voice invites, increment the number of games played per assigned user.
+1. Add /start command to lock faction assignments, flips users in queue to false, assigns faction roles, sends out voice invites, increment the number of games played per assigned user.
 
 ## KNOWN BUGS
 
 1. When a user queues, but leaves the discord server before role assignment, role assigment fails.
-1.
+1. [hard to reproduce] Sometimes /clear_queue does not work, might be a DB problem (exceeding r/w max???)
